@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> random number: <%=random %></h1>
+<%- include('partials/header.ejs') %>
 
-<% if (random % 2 === 0) { %>
-    <h3>Angka genap</h3>
-<% } else {  %>
-     <h3>Angka ganjil</h3>
-<% } %>     
+	<%- include('partials/navbar.ejs') %>
 
-<h1> That number:   <%= random % 2 === 0 ? 'even' : 'odd' %></h1>
-</body>
-</html>
+		<h1>Random number: <%= num %></h1>
+		<% if(num % 2 === 0) { %>
+		<h3>Angka Genap</h3>
+		<% } else { %>
+		<h3>Angka Ganjil</h3>
+		<%} %>
+
+<%- include('partials/footer.ejs') %>
